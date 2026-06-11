@@ -1,130 +1,75 @@
-# Phosh
+[update-readmes]   Mode: rewrite — migrating to template structure...
+# phosh
 
-A pure Wayland shell for mobile devices like smart phones or small
-tablets which
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/phosh)
 
-* use touch input
-* are running battery powered most of the time
-* have limited screen space
-* have a limited number of buttons
-* might be docked to a keyboard, screen and other input devices
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-Typical devices are the Librem 5 and PinePhone or devices formerly
-running proprietary operating systems like the OnePlus 6/6T.
+## Architecture
 
-The companion Wayland compositor is [phoc][].
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
 
-## License
+## Install
 
-phosh is licensed under the GPL-3.0-or-later licence.
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
 
-## Getting the source
-
-```sh
-git clone https://gitlab.gnome.org/World/Phosh/phosh
+```bash
+git clone https://github.com/Interested-Deving-1896/phosh.git
 cd phosh
 ```
 
-The [main][] branch has the current development version.
+## Usage
 
-## Dependencies
+<!-- Add usage examples here. This section is yours — the AI will not modify it. -->
 
-On a Debian based system run
+## Configuration
 
-```sh
-sudo apt -y install build-essential
-sudo apt -y build-dep .
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
+
+## CI
+
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
+
+## Mirror chain
+
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/phosh`](https://github.com/Interested-Deving-1896/phosh) and mirrored through:
+
+```
+Interested-Deving-1896/phosh  ──►  OpenOS-Project-OSP/phosh  ──►  OpenOS-Project-Ecosystem-OOC/phosh
 ```
 
-For an explicit list of dependencies check the `Build-Depends` entry in the
-[debian/control][] file.
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
 
-## Building
+## Contributors
 
-We use the meson (and thereby Ninja) build system for phosh.  The quickest
-way to get going is to do the following:
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
 
-```sh
-meson setup _build
-meson compile -C _build
-```
+## Origins
 
-## Testing
+<!-- AI:start:origins -->
+_Original project — no upstream fork._
+<!-- AI:end:origins -->
 
-To run the tests run
+## Resources
 
-```sh
-xvfb-run meson test --no-suite screenshots -C _build
-```
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
 
-For details see the [.gitlab-ci.yml][] file.
+## License
 
-## Running
-
-### Running from the source tree
-
-When running from the source tree start the compositor *[phoc][]*.
-Then start *phosh* using:
-
-```sh
-_build/run
-```
-
-or (if you built *phoc* from source in *../phoc*) in one command:
-
-```sh
-../phoc/_build/run -C ./data/phoc.ini -E _build/run
-```
-
-This will make sure the needed gsettings schema is found. Note that there's no
-need to install any files outside the source tree.
-
-The result should look something like this:
-
-![phosh](screenshots/phosh-overview.png)
-
-### Running from the Debian packages
-
-If you're running a display manager like GDM or LightDM you can select the
-`Phosh` session from the display managers menu. For development purposes
-you can use the provided systemd unit:
-
-```sh
-systemctl start phosh
-```
-
-This runs *phosh* as the user with user id 1000 (which needs to exist). If you
-don't have that user and don't want to create one you can make systemd
-run *phosh* as any user by using an override file:
-
-```sh
-cat <<EOF > /etc/systemd/system/phosh.service.d/override.conf
-[Service]
-User=<your_user>
-EOF
-```
-
-All of the above use the `/usr/bin/phosh-session` script to start compositor
-and shell under the hood so if you just want to start phosh from the system
-console once invoke that script directly.
-
-## Translations
-
-This is handled via GNOMEs infra, see
-<https://wiki.gnome.org/TranslationProject> and
-<https://l10n.gnome.org/module/phosh/>.
-
-## Getting in Touch
-
-* Issue tracker: <https://gitlab.gnome.org/World/Phosh/phosh/issues>
-* Matrix: <https://matrix.to/#/#phosh:phosh.mobi>
-
-## Development Documentation
-
-Development documentation including public API docs and notes for application
-developers is at <https://world.pages.gitlab.gnome.org/Phosh/phosh>.
-
-[main]: https://gitlab.gnome.org/World/Phosh/phosh/-/tree/main
-[.gitlab-ci.yml]: https://gitlab.gnome.org/World/Phosh/phosh/-/blob/main/.gitlab-ci.yml
-[debian/control]: https://gitlab.gnome.org/World/Phosh/phosh/-/blob/main/debian/control
-[phoc]: https://gitlab.gnome.org/World/Phosh/phoc
+<!-- AI:start:license -->
+[GPL-3.0](https://github.com/Interested-Deving-1896/phosh/blob/group/next/phosh-0.50/COPYING) © 2026 [Interested-Deving-1896](https://github.com/Interested-Deving-1896)
+<!-- AI:end:license -->
